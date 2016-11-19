@@ -1,0 +1,12 @@
+                                   List of databases
+   Name    |   Owner   | Encoding |   Collate   |    Ctype    |    Access privileges    
+-----------+-----------+----------+-------------+-------------+-------------------------
+ ErikYoung | ErikYoung | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ USERNAME  | ErikYoung | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ postgres  | ErikYoung | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ template0 | ErikYoung | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/ErikYoung           +
+           |           |          |             |             | ErikYoung=CTc/ErikYoung
+ template1 | ErikYoung | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/ErikYoung           +
+           |           |          |             |             | ErikYoung=CTc/ErikYoung
+(5 rows)
+

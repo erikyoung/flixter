@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+gem 'bcrypt'
 gem "fog"
 gem "figaro"
 gem 'carrierwave', '>= 1.0.0.rc', '< 2.0'
