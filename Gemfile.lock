@@ -292,7 +292,7 @@ DEPENDENCIES
   fog
   jbuilder (~> 2.0)
   jquery-rails
-  mini_magick
+  mini_magick (~> 4.3.1)
   pg
   rails (= 4.1.9)
   rails_12factor
