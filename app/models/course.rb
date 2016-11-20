@@ -3,6 +3,7 @@ class Course < ActiveRecord::Base
   has_one :image
   belongs_to :user
   has_many :sections
+  has_many :enrollments
   
   
   validates :title, presence: true
