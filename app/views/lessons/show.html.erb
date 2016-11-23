@@ -1,5 +1,9 @@
 <br />
 
+<% if flash[:alert] %>
+    <div class="notice"><%=flash[:alert] %></div>
+  <% end %>
+
 <div class="booyah-box col-xs-10 col-xs-offset-1">
   <h1><%= current_lesson.title %></h1>
   <p>
@@ -15,11 +19,6 @@
       To view this video please enable JavaScript, and consider upgradiny to a web browser that
       <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
     </p>
-
-  <% if flash[:alert] %>
-    <div class="notice"><%=flash[:alert] %></div>
-  <% end %>
-
 
   </video>
 

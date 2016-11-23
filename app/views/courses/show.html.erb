@@ -1,5 +1,10 @@
 <br />
 
+  
+
+  <% if !current_user.enrolled_in?(current_lesson.section.course) %>
+      <h3 class="label label-info">Dude, What's the Fuck?</h3>
+
   <div class="booyah-box col-xs-10 col-xs-offset-1">
     <h1><%= @course.title %></h1>
     <%= image_tag @course.image, class: 'img-responsive' %>
