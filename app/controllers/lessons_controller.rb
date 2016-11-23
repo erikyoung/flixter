@@ -2,7 +2,7 @@ class LessonsController < ApplicationController
   before_action :authenticate_user!
   before_action :require_authorized_for_current_course, only: [:show]
 
-
+  
 
   def show
   end
@@ -12,8 +12,9 @@ class LessonsController < ApplicationController
 
   
   def require_authorized_for_current_course
-   if  !current_user.enrolled_in?(current_lesson.section.course),  flash[:alert] = "Invalid login"
-      redirect_to course_path(current_lesson.section.course)
+   if  !current_user.enrolled_in?(current_lesson.section.course)
+      flash[:alert] =  "Dude, seriously?"
+       redirect_to course_path(current_lesson.section.course)
     end
   end
   helper_method :current_lesson
@@ -21,3 +22,4 @@ class LessonsController < ApplicationController
     @current_lesson ||= Lesson.find(params[:id])
   end
 end
+
