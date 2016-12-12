@@ -11,7 +11,7 @@ class Instructor::SectionsController < ApplicationController
   end
 
   def update
-    current_course.update_attributes(lesson_params)
+    current_course.update_attributes(section_params)
     render text: 'updated!'
   end
 
@@ -32,6 +32,10 @@ class Instructor::SectionsController < ApplicationController
     current_section.course
   end
 end
+
+def current_section
+    @current_section ||= Section.find(params[:id])
+  end
 
 def require_authorized_for_current_section
     if current_section.course.user != current_user
