@@ -1,12 +1,7 @@
 <script>
    $(function() {
 
-    $('.new-lesson-button').click(function( event ) {
-      var lessonUrl = $( event.target).data('lesson-url'); 
-      $('#newLessonForm').attr('action', lessonUrl );
-    });
-
-      $('.lessons').sortable({
+    $('.lessons').sortable({
       update: function( event, ui ) {
       $.ajax({
           type: 'PUT',
@@ -29,6 +24,11 @@
       });
     }
   });
+
+    $('.new-lesson-button').click(function( event ) {
+      var lessonUrl = $( event.target).data('lesson-url'); 
+      $('#newLessonForm').attr('action', lessonUrl );
+    });
 });
 </script>
 
@@ -39,6 +39,7 @@
   <br />
    <%= image_tag current_course.image, class: 'img-responsive' %> 
   <br />
+
 <%= link_to 'Preview As Student...', course_path(@current_course), class: 'btn btn-warning pull-right' %>
 <br class="clr">
 
@@ -108,6 +109,9 @@
       <%= simple_form_for @section, url: instructor_course_sections_path(current_course) do |f| %>
       <div class="modal-body">
           <%= f.input :title %>
+
+      <br />
+      <br />
       
       </div>
 
@@ -133,6 +137,7 @@
       </div>
       <div class="modal-body">
         <%= simple_form_for @lesson, url: "#", html: {id: 'newLessonForm' } do |f| %>
+        <div class="modal-body">
          <%= f.input :title %>
          <%= f.input :subtitle %>
          <%= f.input :video %>
