@@ -12,6 +12,7 @@ class LessonsController < ApplicationController
 
   
   def require_authorized_for_current_course
+    
    if  !current_user.enrolled_in?(current_lesson.section.course)
       flash[:alert] =  "Dude, seriously?"
        redirect_to course_path(current_lesson.section.course)
