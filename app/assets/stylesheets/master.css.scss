@@ -143,8 +143,29 @@ ul .header .glyphicon {
 }
 
 .img-responsive {
-  text-align: center;
-  width:80%;
-  margin-left:80px;
+  width: 100%;
+  float: left;
+  height:390px;
+  box-shadow: 0px 3px 8px #2a2a2a;
+  max-width: 100%;
 }
+
+.whitey h3 {
+  background:rgba(0,0,0, 0.5);
+  color:white;
+  font-family: "Helvetica Neue", Helvetica;
+  font-weight: 200;
+  text-shadow: rgba(0,0,0,0.95) 1px 1px;
+  margin-top:0;
+  margin-bottom:0;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin:0;
+  padding:0;
+}
+
+
+
 
