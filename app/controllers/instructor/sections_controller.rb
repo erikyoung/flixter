@@ -11,7 +11,7 @@ class Instructor::SectionsController < ApplicationController
   end
 
   def update
-    current_course.update_attributes(section_params)
+    current_section.update_attributes(section_params)
     render text: 'updated!'
   end
 
