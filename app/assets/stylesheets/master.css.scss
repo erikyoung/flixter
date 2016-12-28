@@ -71,6 +71,11 @@ body {
   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
   margin-top: 30px;
   padding:10px;
+  border-radius:0;
+  -moz-box-shadow: 2px 1px 10px 4px rgba(0,0,0,0.47);
+  -webkit-box-shadow: 2px 1px 10px 4px rgba(0,0,0,0.47);
+  
+
 }
 
 .booyah-box h2, .booyah-box h1 {
@@ -122,6 +127,10 @@ ul {
   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
   padding:20px;
   margin:20px;
+  border-radius: 17px 17px 17px 17px;
+  -moz-border-radius: 17px 17px 17px 17px;
+  -webkit-border-radius: 17px 17px 17px 17px;
+  border: 0px solid #000000;
   }
 
 ul .header {
@@ -140,15 +149,29 @@ ul .header .glyphicon {
   font-weight: 100;
   padding:8px;
   font-size:15px;
+  box-shadow: 0px 3px 8px #2a2a2a;
+  max-width: 100%;
+  border-radius: 17px 17px 17px 17px;
+  -moz-border-radius: 17px 17px 17px 17px;
+  -webkit-border-radius: 17px 17px 17px 17px;
+  border: 0px solid #000000;
 }
 
 .lessons li b {
   font-size: 25px;
    font-weight:100;
+   border-radius: 17px 17px 17px 17px;
+  -moz-border-radius: 17px 17px 17px 17px;
+  -webkit-border-radius: 17px 17px 17px 17px;
+  border: 0px solid #000000;
 }
 
 .lessons li p {
   margin:0;
+  border-radius: 17px 17px 17px 17px;
+  -moz-border-radius: 17px 17px 17px 17px;
+  -webkit-border-radius: 17px 17px 17px 17px;
+  border: 0px solid #000000;
 }
 
 .img-responsive {
