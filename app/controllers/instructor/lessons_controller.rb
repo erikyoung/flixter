@@ -9,6 +9,9 @@ class Instructor::LessonsController < ApplicationController
     redirect_to instructor_course_path(current_section.course)
   end 
 
+  def edit
+  end
+
   def update
     current_lesson.update_attributes(lesson_params)
     render text: 'updated!'

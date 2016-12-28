@@ -32,9 +32,14 @@ h1, h2, h3, h4, h5, h6, .navbar {
 .frosty h1 {
   background:rgba(0,0,0, 0.5);
   color:white;
+
   font-family: "Helvetica Neue", Helvetica;
   font-weight: 200;
   text-shadow: rgba(0,0,0,0.95) 1px 1px;
+  border-radius: 17px 17px 17px 17px;
+  -moz-border-radius: 17px 17px 17px 17px;
+  -webkit-border-radius: 17px 17px 17px 17px;
+  border: 0px solid #000000;
 }
 
 .frosty h2 {
@@ -46,6 +51,10 @@ h1, h2, h3, h4, h5, h6, .navbar {
 
 .btn {
   border-radius:0;
+  -moz-box-shadow: 2px 1px 10px 4px rgba(0,0,0,0.47);
+  -webkit-box-shadow: 2px 1px 10px 4px rgba(0,0,0,0.47);
+  box-shadow: 2px 1px 10px 4px rgba(0,0,0,0.47);
+
 }
 
 body {
@@ -54,9 +63,9 @@ body {
 }
 
 .booyah-box {
-  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
-  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
-  box-shadow: 1px 1px 2px 0 #d0d0d0;
+  -moz-box-shadow: 2px 2px 2px 0 #d0d0d0;
+  -webkit-box-shadow: 2px 2px 2px 2 #d0d0d0;
+  box-shadow: 2px 2px 2px 0 #d0d0d0;
   background: #fff;
   border: 1px solid #ccc;
   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
@@ -148,6 +157,10 @@ ul .header .glyphicon {
   height:390px;
   box-shadow: 0px 3px 8px #2a2a2a;
   max-width: 100%;
+  border: 2px solid;
+  border-radius: 25px;
+  height: 400px;
+
 }
 
 .whitey h3 {
@@ -168,6 +181,21 @@ ul .header .glyphicon {
   font-weight: 200;
   text-shadow: rgba(0,0,0,0.95) 1px 1px;
   text-align: center;
+  border-radius: 17px 17px 17px 17px;
+  -moz-border-radius: 17px 17px 17px 17px;
+  -webkit-border-radius: 17px 17px 17px 17px;
+  border: 0px solid #000000;
+
+}
+
+.bros { 
+
+border-radius: 17px 17px 17px 17px;
+  -moz-border-radius: 17px 17px 17px 17px;
+  -webkit-border-radius: 17px 17px 17px 17px;
+  border: 0px solid #000000;
+
+
 }
 
 .video-js {
