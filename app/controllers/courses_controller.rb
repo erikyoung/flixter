@@ -5,8 +5,6 @@ class CoursesController < ApplicationController
 
   def show
     @course = Course.find(params[:id])
-    @course.update_attributes(course_params)
-    redirect_to root_path
   end
 
 end
