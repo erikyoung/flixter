@@ -20,6 +20,10 @@ class Instructor::CoursesController < ApplicationController
    @lesson = Lesson.new
   end 
 
+  def update
+    @course = Course.find(params[:id])
+  end
+
   private 
   
 
