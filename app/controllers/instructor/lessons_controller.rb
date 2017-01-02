@@ -4,14 +4,13 @@ class Instructor::LessonsController < ApplicationController
   before_action :require_authorized_for_current_lesson, only: [:update]
   
 
+
   def create
-    @lesson = current_section.lessons.create(lesson_params)
-    redirect_to instructor_course_path(current_section.course)
+    @lesson = @current_section.lessons.create(lesson_params)
+    redirect_to instructor_course_path(@current_section.course)
   end 
 
-  def edit
-  end
-
+  
   def update
     current_lesson.update_attributes(lesson_params)
     render text: 'updated!'
@@ -29,18 +28,24 @@ class Instructor::LessonsController < ApplicationController
     @current_lesson ||= Lesson.find(params[:id])
   end
 
-  def require_authorized_for_current_section
-    if current_section.course.user != current_user
-      return render text: 'Unauthorized', status: :Unauthorized
-    end
-  end
-
   helper_method :current_section
   def current_section
     @current_section ||= Section.find(params[:section_id])
   end
 
+
   def lesson_params
     params.require(:lesson).permit(:title, :subtitle, :video, :row_order_position)
   end 
+
+
+  def require_authorized_for_current_section
+    if current_section.course.user != current_user
+      return render text: 'Unauthorized', status: :Unauthorized
+    end
+  end
 end
+
+  
+
+
