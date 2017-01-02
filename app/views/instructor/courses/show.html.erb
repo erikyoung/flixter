@@ -1,13 +1,13 @@
-<script>
+<script type="text/javascript">
    $(function() {
 
     $('.lessons').sortable({
       update: function( event, ui ) {
       $.ajax({
-          type: 'PUT',
-          url: ui.item.data('update-url'), 
-          dataType: 'json', 
-          data: { lesson: { row_order_position: ui.item.index() } }
+        type: 'PUT',
+        url: ui.item.data('update-url'), 
+        dataType: 'json', 
+        data: { lesson: { row_order_position: ui.item.index() } }
             
       });
      }
@@ -16,7 +16,7 @@
 
   $('.sections').sortable({
     update: function( event, ui ) {
-    $.ajax({
+      $.ajax({
         type: 'PUT',
         url: ui.item.data('update-url'),
         dataType: 'json',
