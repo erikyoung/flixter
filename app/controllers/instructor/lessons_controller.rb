@@ -45,7 +45,7 @@ end
 
   def require_authorized_for_current_section
     if current_section.course.user != current_user
-      return render text: 'Unauthorized', status: :Unauthorized
+      return render text: 'Unauthorized', status: :unauthorized
     end
   end
 end

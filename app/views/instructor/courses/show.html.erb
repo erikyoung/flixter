@@ -1,6 +1,6 @@
 <script type="text/javascript">
+   
    $(function() {
-
     $('.lessons').sortable({
       update: function( event, ui ) {
       $.ajax({
@@ -30,6 +30,7 @@
       $('#newLessonForm').attr('action', lessonUrl);
     });
 });
+
 </script>
 
 <br />
@@ -44,7 +45,7 @@
 <div class="awesome">
 <%= link_to 'Preview As Student...', course_path(@current_course), class: 'awesome btn btn-warning pull-right' %>
 
-<br class="clr">
+<br class="clr" />
 </div>
 
 
@@ -55,7 +56,7 @@
 </div>
 
 <ul class="sections">
-    <% @current_course.sections.rank(:row_order).each do |section| %>
+ <% @current_course.sections.rank(:row_order).each do |section| %>
     <li class="section section-li" data-update-url="<%= instructor_section_path(section) %>">
       <div class="header">
         <span class="glyphicon glyphicon-list"></span>
@@ -65,9 +66,6 @@
         Add new lesson
       </button>
 
-    <div class="update pull-right">
-    <%= link_to 'Update A Section', instructor_section_path(section), class: 'btn btn-primary btn-sm' %>
-  </div>
       <br class="clr" />
       <br class="clr" />
       <ul class="lessons">
@@ -115,7 +113,7 @@
         <h4 class="modal-title" id="newSectionModalLabel">Add a New Section</h4>
       </div>
       <%= simple_form_for @section, url: instructor_course_sections_path(current_course) do |f| %>
-      <div class="modal-body">
+      
           <%= f.input :title %>
 
       <br />

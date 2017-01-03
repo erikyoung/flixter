@@ -33,7 +33,7 @@ class Instructor::CoursesController < ApplicationController
     end
 
   def course_params
-    params.require(:course).permit(:title, :description, :cost, :image, :row_order_position)
+    params.require(:course).permit(:title, :description, :cost, :image)
   end
 
   def require_authorized_for_current_course
