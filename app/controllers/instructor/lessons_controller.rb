@@ -9,7 +9,7 @@ class Instructor::LessonsController < ApplicationController
 
   def create
     @lesson = @current_section.lessons.create(lesson_params)
-    redirect_to instructor_course_path(@current_section.course)
+    redirect_to instructor_course_path(current_section.course)
   end 
 
 
@@ -34,22 +34,20 @@ class Instructor::LessonsController < ApplicationController
 
   helper_method :current_section
   def current_section
-    if params[:section_id].present?
       @current_section ||= Section.find(params[:section_id]) 
-    else
-      current_lesson.section
   end
 
   def lesson_params
     params.require(:lesson).permit(:title, :subtitle, :video, :row_order_position)
   end 
 
+
   def require_authorized_for_current_section
     if current_section.course.user != current_user
       return render text: 'Unauthorized', status: :unauthorized
     end
   end
-end
+
 
 
 

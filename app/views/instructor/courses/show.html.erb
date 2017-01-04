@@ -4,7 +4,7 @@
     $('.lessons').sortable({
       update: function( event, ui ) {
         $.ajax({
-          type: 'PUT',
+          type: 'PATCH',
           url: ui.item.data('update-url'), 
           dataType: 'json', 
           data: { lesson: { row_order_position: ui.item.index() }}
@@ -12,7 +12,7 @@
       });
      }
     });
-
+  
 
   $('.sections').sortable({
     update: function( event, ui ) {
@@ -24,6 +24,8 @@
       });
     }
   });
+  
+
 
 
     $('.new-lesson-button').click(function( event ) {
@@ -31,6 +33,7 @@
       $('#newLessonForm').attr('action', lessonUrl);
     });
 });
+
 
 </script>
 
@@ -73,6 +76,7 @@
         <% section.lessons.rank(:row_order).each do |lesson| %>
         <div class="col-xs-12 col-sm-6">
           <li data-update-url="<%= instructor_lesson_path(lesson) %>">
+          
             <div class="col-xs-1">
               <br />
               
