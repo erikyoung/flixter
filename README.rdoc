@@ -1,28 +1,5 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Flixter is an online learning platform that allows to both enroll (and pay for) courses. This two-way learning model allows people to create courses in areas of expertise as well as to learn from other users. Within the platform, users are able to create video tutorials that quite literally allows user to 'show' users how to do something. Extremely useful. 
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+To creat this app, the use of nested association was applied heavily in the model as well as the use of stripe, carrierwave, as well as minimagick and Amazon's AWS in order to play and display video use. Not only that, on the creation side of the course, it also became clear that course creators would also need to be able to create lessons as well as move them around as needed. To do this required me to learn how to use a bit of Javascript as well as JSON. So as it stands, users should be able to create courses with clearly parsed out sections and nested lessons. 
